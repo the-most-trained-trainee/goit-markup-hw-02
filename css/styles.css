@@ -1,4 +1,18 @@
+/* «C6» Для зберігання палітри кольорів макета (текст, фон, виділення) використовуються CSS-змінні. */
+:root {
+    --black: #212121;
+    --black2: #2F303A;
+    --blue: #2196F3;
+    --grey: #757575;
+    --white: #ffffff;
+}
+
 /* ===GENERAL CLASSES=== */
+
+body {
+    font-family: 'Roboto', Arial, Helvetica;
+    color: var(--black);
+}
 
 .invisible-heading {
     display: none;
@@ -11,40 +25,38 @@
 /*        WebStudio Icon */
 
 .web-studio-icon {
-    font-family: 'Raleway', sans-serif;
-    font-style: normal;
+    font-family: 'Raleway', Arial, Helvetica;
     font-weight: 700;
     font-size: 26px;
-    line-height: 31px;
+    line-height: 1.2;
     letter-spacing: 0.03em;
     color: #000000;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     text-decoration: none;
+    font-style: normal;
 }
 
 .web-studio-icon-part {
-    color: #2196F3;
+    color: var(--blue);
 }
 
 /*        Navigation Links */
 
 .navi-links {
-    list-style-type: none;
-}
-
-.navi-links a {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
-    color: #212121;
     text-decoration: none;
 }
 
+.navi-links a {
+    text-decoration: none;
+    color:var(--black);
+}
+
 .navi-links a:hover {
-    color: #2196F3;
+    color: var(--blue);
 }
 
 /*        Header Contacts  */
@@ -54,54 +66,52 @@
 }
 
 .contact-list a {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.02em;
-    color: #757575;
+    color: var(--grey);
     text-decoration: none;
 }
 
-.contact-list a:hover {
-    color: #2196F3;
+.contact-list a:hover, a:focus {
+    color: var(--blue);
 }
 
 /*        Footer Contacts  */
 
 .contact-details {
-    background: #2F303A;
+    background: var(--black);
 }
 
 .contact-details a {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.7;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
+    font-style: normal;
+}
+
+.contact-details a:hover, a:focus {
+    color: var(--blue);
 }
 
 .address-kyiv {
-    color: #FFFFFF;
+    color: var(--white);
 }
 
 /* ===INDEX CLASSES=== */
 
 .hero-text {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 900;
     font-size: 44px;
-    line-height: 60px;
+    line-height: 1.36;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #FFFFFF;
-    background-color: #2F303A;
+    color: var(--white);
+    background-color: var(--black2);
     width: 1600px;
 }
 
@@ -109,75 +119,60 @@
     height: 50px;
     width: 200px;
     border-radius: 4px;
-    background-color: #2196F3;
-    color: #fff;
+    background-color: var(--blue);
+    color: var(--white);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    font-family: Roboto;
     font-size: 16px;
     font-weight: 700;
-    line-height: 30px;
+    line-height: 1.875;
     letter-spacing: 0.06em;
     text-align: center;
+    cursor: pointer;
 }
 
 /*        Qualities */
 
 .quality-heading {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: #212121;
 }
 
 .quality-text {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
-    line-height: 24px;
+    line-height: 1.7;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--grey);
 }
 
 /*        Activities & Team Header */
 
 .section-header {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
-    line-height: 42px;
+    line-height: 1.16;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
 }
 
 /*        Team Members */
 
 .member-name {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.1875;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
 }
 
 .member-position {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 19px;
+    line-height: 1.1875;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--grey);
 }
 
 /* ===PORTFOLIO CLASSES=== */
@@ -188,48 +183,38 @@
     height: 38px;
     background: #F5F4FA;
     border-radius: 4px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 1.625;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #212121;
 }
 
 .filter-button:hover {
     height: 38px;
-    background:#2196F3;
+    background:var(--blue);
     border-radius: 4px;
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 16px;
-    line-height: 26px;
+    line-height: 1.625;
     text-align: center;
     letter-spacing: 0.03em;
-    color: #fff;
+    color: var(--white);
+    cursor: pointer;
 }
 
 /*        Project List */
 
 .project-name {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 18px;
-    line-height: 36px;
+    line-height: 2;
     letter-spacing: 0.06em;
-    color: #212121;
 }
 
 .project-description {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 16px;
-    line-height: 30px;
+    line-height: 1.875;
     letter-spacing: 0.03em;
-    color: #757575;
+    color: var(--grey);
 }
